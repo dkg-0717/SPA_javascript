@@ -1,0 +1,167 @@
+
+.grid-editor{
+  --width: auto;
+  --height: auto;
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  z-index: 9999;
+  transform: translateX(50%);
+}
+
+.grid-editor-button{
+  border: 1px dashed gray;
+  justify-self: end;
+  align-self: center;
+  background: #fff;
+  cursor: pointer;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-editor-container{
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  background:#fff;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.grid-section{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+
+}
+
+.grid-form{
+  margin: 5px 0;
+}
+
+.form-section{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input.grid-form {
+  padding: 10px;
+}
+
+.text-button{
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.show-grid-editor{
+  animation-name: fadeIn;
+  animation-duration: 150ms;
+}
+
+.hide-grid-editor{
+  animation-name: fadeOut;
+  animation-duration: 150ms;
+}
+
+.grid-container{
+  position: relative;
+  border: 1px dashed gray;
+}
+
+.nav-editor{
+  height: 100%;
+}
+
+.list-nav{
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  list-style: none;
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+}
+
+.list-nav-item{
+  border: 1px dashed gray;
+  width: 100%;
+  height: 100%;
+}
+
+.list-nav-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.custom-grid{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6,1fr);
+}
+
+.custom-item{
+  border: 1px dashed gray;
+  position: relative;
+}
+
+.first-grid{
+  z-index: 9999;
+}
+
+@keyframes fadeIn{
+  0%{
+    transform: scale(0);
+  }
+  25%{
+    transform: scale(.25);
+  }
+  50%{
+    transform: scale(.5);
+  }
+  75%{
+    transform: scale(.75);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut{
+  0%{
+    transform: scale(1);
+  }
+  25%{
+    transform: scale(.75);
+  }
+  50%{
+    transform: scale(.5);
+  }
+  75%{
+    transform: scale(.25);
+  }
+  100%{
+    transform: scale(0);
+  }
+}

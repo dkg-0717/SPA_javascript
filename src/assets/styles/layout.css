@@ -1,0 +1,12 @@
+.layout {
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  background: #eceae8;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), 
+  left 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.3s;
+}
+
+.active{
+  transform: translateX(calc(var(--menu-width) * -1));
+}
